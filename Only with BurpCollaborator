@@ -36,3 +36,6 @@ https://portswigger.net/web-security/xxe/blind/lab-xxe-with-out-of-band-interact
 
 [3] Lab: Exploiting blind XXE to exfiltrate data using a malicious external DTD
 https://portswigger.net/web-security/xxe/blind/lab-xxe-with-out-of-band-exfiltration
+
+[4]
+https://portswigger.net/web-security/ssrf/blind/lab-out-of-band-detection

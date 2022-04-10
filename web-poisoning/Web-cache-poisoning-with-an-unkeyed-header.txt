@@ -1,0 +1,9 @@
+aWeb cache poisoning with an unkeyed header
+
+
+Used the Param Miner Extension
+- The tool finds that the headers x-forwarded-host and origin could be used.
+- I tested on the product=5 URL to inject something at the x-forwarded-host
+- I used the following payload at HOME page:
+- Used the x-forwarded-host header with:
+X-Forwarded-Host: teste"></script><script>alert(document.cookie);</script><script src="
